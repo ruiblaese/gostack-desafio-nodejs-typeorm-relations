@@ -1,0 +1,12 @@
+version: '3'
+volumes:
+  datadb:
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "gostack_desafio09_tests"
+      POSTGRES_PASSWORD: "docker"
+    ports:
+      - "5432:5432"
